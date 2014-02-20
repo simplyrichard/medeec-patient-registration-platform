@@ -1,0 +1,19 @@
+{% extends '../layouts/default.html' %}
+{% block content %}
+	<h1>Create new patient: </h1>
+	<form class="signin form-horizontal" action="/articles" method="post">
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="name">Title</label>
+            <div class="col-md-8">
+                <input id="title" class="form-control" type="text" name="title" placeholder="Title" value="{{article.title}}" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="email">Content</label>
+            <div class="col-md-8">
+                <input id="content" class="form-control" type="text" name="content" placeholder="Content" value="{{article.content}}" />
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Wyslij</button>
+    </form>
+{% endblock %}
